@@ -1,0 +1,9 @@
+p {
+    color: green;
+    size: 25px;
+    background-color: lightblue;
+    border-width: 1px;
+    border-color: green;
+    border-style: solid;
+    padding: 5px;
+}

@@ -1,0 +1,9 @@
+p {
+    color: red;
+    size: 20px;
+    background-color: lightpink;
+    border-width: 1px;
+    border-color: brown;
+    border-style: solid;
+    padding: 5px;
+}

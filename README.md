@@ -25,3 +25,25 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Learning Angular
+
+Interpolation -> when you try to interpolate a typescript property into html to display it. Should not be used while property binding
+Property Binding -> when you bind a property of an html element to the value of a variable in typescript
+
+# Bindable Properties and Events
+How do you know to which Properties or Events of HTML Elements you may bind? You can basically bind to all Properties and Events - a good idea is to console.log()  the element you're interested in to see which properties and events it offers.
+
+For events, you don't bind to onclick but only to click (=> (click)).
+
+The MDN (Mozilla Developer Network) offers nice lists of all properties and events of the element you're interested in. Googling for YOUR_ELEMENT properties  or YOUR_ELEMENT events  should yield nice results.
+
+For Two-Way-Binding to work, you need to enable the ngModel  directive. This is done by adding the FormsModule  to the imports[]  array in the AppModule.
+
+You then also need to add the import from `@angular/forms`  in the `app.module.ts` file:
+
+`import { FormsModule } from '@angular/forms'`; 
+
+# Directives
+1. **Structural Directives**: Change structure of the DOM by dynamicaly inserting or removing elements from the DOM on the fly, based on conditions. eg: *ngIf directive
+2. **Attribute Directives**: These change the attributes of the elements, on which they were placed. They never modify the DOM. eg: `ngStyle,ngClass`
