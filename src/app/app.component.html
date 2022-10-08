@@ -76,4 +76,22 @@
       <app-warning *ngFor="let element of warningMessages"></app-warning>
     </div>
   </div>
+  <hr />
+  <div class="row">
+    <div class="col-sm-12">
+      <p>ngFor Directive Assignment</p>
+      <button class="btn btn-primary" (click)="toggleDisplayMessage()">
+        Display secret Text
+      </button>
+    </div>
+    <div class="col-sm-12">
+      <p *ngIf="isMessageToBeDisplayed">Secret Text: tuna</p>
+      <p
+        *ngFor="let element of timestampLog; let i = index"
+        [ngClass]="{ someClass: i >= 4 }"
+      >
+        Message toggled at : {{ element }}
+      </p>
+    </div>
+  </div>
 </div>
