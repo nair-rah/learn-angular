@@ -1,0 +1,16 @@
+<div class="container">
+  <app-cockpit
+  (serverCreated) = "onServerAdded($event)"
+  (blueprintCreated) = "onBlueprintAdded($event)"
+  ></app-cockpit>
+  <hr />
+  <div class="row">
+    <div class="col-xs-12">
+      <!-- Classic example of custom data binding in angular. We bind the element property of the app-server element with each item in serverElements from app-component -->
+      <app-server-element
+        *ngFor="let server of serverElements"
+        [element]="server"
+      ></app-server-element>
+    </div>
+  </div>
+</div>
